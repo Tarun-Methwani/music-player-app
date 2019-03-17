@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tarunmethwani.musicplayer.MainActivity">
+
+    <ListView
+        android:id="@+id/lvSong"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="250dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp" />
+
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lvSong"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/lvSong"
+        android:layout_marginBottom="152dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:text="Pause" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnPause"
+        android:layout_alignBottom="@+id/btnPause"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:text="Stop" />
+
+    <ImageButton
+        android:id="@+id/ibtnSkipBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnPause"
+        android:layout_alignRight="@+id/btnPause"
+        android:layout_below="@+id/btnStop"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="25dp"
+        app:srcCompat="@android:drawable/ic_media_rew" />
+
+    <ImageButton
+        android:id="@+id/ibtnSkipForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnStop"
+        android:layout_alignStart="@+id/btnStop"
+        android:layout_alignTop="@+id/ibtnSkipBack"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        app:srcCompat="@android:drawable/ic_media_ff" />
+
+    <ImageButton
+        android:id="@+id/ibtnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ibtnSkipBack"
+        android:layout_alignStart="@+id/ibtnSkipBack"
+        android:layout_below="@+id/ibtnSkipBack"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <ImageButton
+        android:id="@+id/ibtnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ibtnSkipForward"
+        android:layout_alignStart="@+id/ibtnSkipForward"
+        android:layout_below="@+id/ibtnSkipForward"
+        app:srcCompat="@android:drawable/ic_media_next" />
+</RelativeLayout>
